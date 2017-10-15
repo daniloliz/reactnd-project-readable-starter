@@ -15,10 +15,13 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  text-align: center;
+  font-size: 42px;
+  font-family: 'Gloria Hallelujah', cursive !important;
 }
 
 .App-intro {
+  font-family: 'Acme', sans-serif;
   font-size: large;
 }
 
