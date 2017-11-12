@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppBar, Drawer, Menu, MenuItem, Divider } from 'material-ui';
+import '../styles/App.css';
 
 class Header extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Header extends Component {
     handleToggle = () => this.setState({open: !this.state.open});
     render() {
         return (
-            <div>
+            <div className="App">
                 <AppBar 
                     onLeftIconButtonTouchTap={this.handleToggle}
                     title={
@@ -49,7 +50,8 @@ class Header extends Component {
                             style={{ 
                             textAlign: "left", 
                             fontFamily: "'Acme', sans-serif",
-                            fontSize: 20
+                            fontSize: 20,
+                            textTransform: 'capitalize'
                             }} 
                         />
                         </div>

@@ -29,3 +29,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Post {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.Delete-button {
+  float: right;
+}
+
+.Card-category {
+  display: inline;
+  position: absolute;
+  padding: 50px;
+  margin-left: 150px;
+  margin-top: 50px;
+}
