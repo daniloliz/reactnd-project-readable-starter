@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import Header from './Header'
-import { getAll } from '../api/categories'
+import Header from './Header';
+import Coments from './Coments'
+import Home from './Home';
+import { getAll } from '../api/categories';
 import '../styles/App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: []
+      categories: [],
+      openComents: true
     }
   }
   componentDidMount() {
     getAll().then((categories) => {
-      console.log(categories);
       this.setState({ categories });
     })
   }
+  handleToggleComents = () => this.setState({openComents: !this.state.openComents});
   render() {
     return (
-      <div className="App">
+      <div>
         <Header categories={this.state.categories} />
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-intro">
+          <Home categories={this.state.categories} />
+        </div>
+        <Coments openComents={this.state.openComents} />
       </div>
     );
   }
